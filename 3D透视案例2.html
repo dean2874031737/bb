@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D透视案例</title>
+    <link rel="shortcut icon" href="./Sinni_favicon.ico"/>
+    <style>
+        .box{
+            position: relative;
+            width: 1080px;
+            height: 1080px;
+            margin: 100px auto;
+            transition: all 2s;
+            transform-style: preserve-3d;
+            font-size: 150px;
+            text-align: center;
+            line-height:1700px;
+        }
+        .box:hover{
+            transform: rotateY(-180deg);
+        }
+        .forward,.backward{
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius:50%;
+        }
+        .box .forward{
+            background-image: url("images/bb2.jpg");
+            z-index: 1;
+        }
+        .box .backward{
+            background-image: url("images/bb1.jpg");
+            transform: rotateY(180deg);
+        }
+    </style>
+
+</head>
+<body>
+<div class="box">
+    <div class="forward">伍照熙</div>
+    <div class="backward">我爱你</div>
+</div>
+</body>
+</html>
